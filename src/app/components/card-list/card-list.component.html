@@ -1,0 +1,8 @@
+<app-card
+  *ngFor="let card of cards; let i = index"
+  [title]="card.title"
+  [content]="card.content"
+  (addCard)="addCard()"
+>
+  <app-list-item (remove)="removeCard(i)"></app-list-item>
+</app-card>
